@@ -1,0 +1,58 @@
+$colors: (
+    dark-light: #fbfbfb,
+    dark-medium: #2b3744,
+    dark: #212d38,
+    light-light: #fff,
+    light-medium: #fafafa,
+    light: #8b8b8b
+);
+
+@function get-color($key) {
+    @return map-get($colors, $key);
+}
+
+body {
+    &.dark-mode {
+        color: white;
+        background: get-color(dark);
+
+        nav {
+            background: get-color(dark-medium);
+        }
+
+        ion-icon {
+            color: get-color(dark-light);
+        }
+
+        .back-button,
+        .card__container,
+        .filter-actions__form-fields {
+            color: get-color(dark-light);
+            background: get-color(dark-medium);
+        }
+
+        .filter-actions__form-fields {
+            input {
+                color: get-color(dark-light);
+                &::placeholder {
+                    color: get-color(dark-light);
+                }
+            }
+        }
+
+        .country-info__border-countries__buttons {
+            a {
+                color: get-color(dark-light);
+                background: get-color(dark-medium);
+            }
+        }
+
+        .theme-style {
+            color: get-color(dark-light);
+        }
+    }
+
+    ion-icon {
+        color: get-color(light);
+    }
+}

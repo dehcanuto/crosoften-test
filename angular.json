@@ -32,7 +32,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/styles/styles.scss",
+              "src/app/styles/theme.scss",
+              "src/app/styles/responsive.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
