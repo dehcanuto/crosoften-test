@@ -15,7 +15,7 @@
 
     @media screen and (max-width: 640px) {
       grid-template-columns: 1fr;
-      padding: 30px;
+      gap: 20px;
     }
   }
 }
