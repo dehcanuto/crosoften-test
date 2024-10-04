@@ -1,5 +1,5 @@
 @if (country) {
-    <div class="card">
+    <a [href]="'/country/' + 1" class="card">
         <img
           class="card__thumbnail"
           [src]="country.flags.png"
@@ -11,5 +11,5 @@
           <p><b>Region:</b> {{ country.region }}</p>
           <p><b>Capital:</b> {{ country.capital }}</p>
         </div>
-    </div>
+    </a>
 }

@@ -1,6 +1,11 @@
 nav {
-    display: flex;
-    padding: 30px;
-    align-items: center;
-    justify-content: space-between;
+    padding: 10px;    
+    background: #fff;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

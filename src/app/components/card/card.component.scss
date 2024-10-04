@@ -1,21 +1,24 @@
 .card {
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.100);
-    border-radius: 5px;
-    height: 100%;
-    cursor: pointer;
-
-    &__thumbnail {
-        width: 100%;
-        height: 150px;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-    }
-
-    &__title {
-      margin-bottom: 15px;
-    }
+  display: flex;
+  flex-flow: column;
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
   
-    &__container {
-      padding: 10px 15px 20px 15px;
-    }
+  &__thumbnail {
+    width: 100%;
+    height: 150px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    padding: 10px 15px 20px 15px;
+  }
 }

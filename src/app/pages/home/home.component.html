@@ -1,1 +1,9 @@
-<p>home works!</p>
+<main>
+    <section class="container mx-auto contries-list">
+        <div class="contries-list__container">
+            @for (item of countries; track item.name) {
+                <app-card [country]="item"></app-card>
+            }
+        </div>
+    </section>
+</main>
