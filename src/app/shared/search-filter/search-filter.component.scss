@@ -32,5 +32,8 @@
 
     select {
         max-width: 150px;
+        &:focus {
+            outline: none;
+        }
     }
 }

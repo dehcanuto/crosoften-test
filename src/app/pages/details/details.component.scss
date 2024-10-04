@@ -6,22 +6,6 @@
       height: auto;
     }
 
-    &__thumbnail {
-      display: flex;
-      img {
-        width: 100%;
-        max-width: 500px;
-      }
-    }
-  
-    &__box {
-      grid-area: 'box';
-  
-      p {
-        margin: 10px 0;
-      }
-    }
-  
     &__details {
       display: flex;
       justify-content: space-around;
@@ -29,6 +13,24 @@
   
       h2 {
         margin-bottom: 20px;
+      }
+    }
+
+    &__thumbnail {
+      display: flex;
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+
+    &__description {
+      padding: 30px;
+
+      &__box {    
+        p {
+          margin: 10px 0;
+        }
       }
     }
   
