@@ -1,0 +1,10 @@
+<button type="button" class="theme-style" (click)="toggleTheme()">
+    @if (isDarkMode) {
+        <ion-icon name="moon-outline"></ion-icon>
+        <span>Dark Mode</span>
+    }
+    @else {
+        <ion-icon name="sunny-outline"></ion-icon>
+        <span>Light Mode</span>
+    }
+</button>

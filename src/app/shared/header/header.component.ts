@@ -1,12 +1,12 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component } from '@angular/core';
+import { StyleModeComponent } from "../style-mode/style-mode.component";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [StyleModeComponent],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
   title = 'Where in the world?';

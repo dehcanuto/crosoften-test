@@ -4,7 +4,7 @@ import { finalize, map, of, switchMap } from 'rxjs';
 
 import { CountriesService } from '../../services/countries.service';
 import { CountryType } from '../../models/country.model';
-import { formatSlugToString } from '../../misc/format';
+import { formatSlugToString, formatNumber } from '../../misc/format';
 
 @Component({
   selector: 'app-details',
@@ -30,6 +30,10 @@ export class DetailsComponent {
     return this.country?.languages ? Object.values(this.country.languages) : [];
   }
 
+  get population() {
+    return formatNumber(this.country.population);
+  }
+
   ngOnInit(): void {
     this.getCountry(formatSlugToString(this.route.snapshot.params['url']))
       .pipe(
@@ -44,10 +48,7 @@ export class DetailsComponent {
             .pipe(map(countries => countries.flatMap(country => country.name.common)));
         }),
       )
-      .subscribe(borderCountries => {
-        this.borderCountries = borderCountries;
-        console.log(borderCountries);
-      });
+      .subscribe(borderCountries => this.borderCountries = borderCountries);
   }
 
   private getCountry(url: string) {

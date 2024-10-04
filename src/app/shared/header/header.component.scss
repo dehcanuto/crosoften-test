@@ -8,16 +8,6 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-        .theme-style {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1rem;
-            font-weight: 600;
-            background: transparent;
-            border: none;
-        }
     }
 
     @media screen and (max-width: 640px) {

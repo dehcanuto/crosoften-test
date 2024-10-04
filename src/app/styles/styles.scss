@@ -8,7 +8,6 @@
 
 body {
     margin: 0;
-    background: #fafafa;
 }
 
 a {
@@ -58,39 +57,4 @@ a {
     --tw-shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
     --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-/* responsive */
-
-@media (min-width: 640px) {
-    .container {
-        max-width:640px
-    }
-    .sm\:grid-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width:768px
-    }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        max-width:1024px
-    }
-}
-
-@media (min-width: 1280px) {
-    .container {
-        max-width:1280px
-    }
-}
-
-@media (min-width: 1536px) {
-    .container {
-        max-width:1536px
-    }
 }
