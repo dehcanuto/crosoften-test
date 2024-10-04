@@ -10,10 +10,24 @@
         color: #000;
         border: none;
         border-radius: 7px;
+        ion-icon {
+            font-size: 24px;
+            color: #8b8b8b;
+        }
     }
         
-    input {
+    .search {
+        display: flex;
         max-width: 400px;
+        background: white;
+        input {
+            width: 100%;
+            padding-left: 20px;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+        }
     }
 
     select {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { finalize, map, of, switchMap } from 'rxjs';
 
@@ -11,7 +11,8 @@ import { formatSlugToString } from '../../misc/format';
   standalone: true,
   imports: [],
   templateUrl: './details.component.html',
-  styleUrl: './details.component.scss'
+  styleUrl: './details.component.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DetailsComponent {
 [x: string]: any;

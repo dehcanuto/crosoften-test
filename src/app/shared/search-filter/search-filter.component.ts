@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { debounceTime, finalize, of, Subject, switchMap, takeUntil, tap } from 'rxjs';
@@ -13,7 +13,8 @@ import { RegionEnum } from '../../enums/region.enum';
   standalone: true,
   imports: [ReactiveFormsModule],
   templateUrl: './search-filter.component.html',
-  styleUrl: './search-filter.component.scss'
+  styleUrl: './search-filter.component.scss',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SearchFilterComponent {
   public  loading = true;
