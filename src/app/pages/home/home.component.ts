@@ -24,7 +24,6 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.getAllCountries().subscribe(countries => this.countries = countries);
-
     this.regions = Object.values(RegionEnum).map(value => ({
       value,
       label: value[0].toUpperCase() + value.slice(1),

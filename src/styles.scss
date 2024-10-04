@@ -1,7 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 body {
     margin: 0;
     background: #fafafa;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.button {
+    display: flex;
+    width: 80px;
+    height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -13,11 +36,38 @@ body {
     margin-right: auto;
 }
 
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gap-7 {
+    gap: 1.75rem;
+}
+
+.shadow-lg {
+    --tw-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl {
+    --tw-shadow: 0 20px 25px -5px #0000001a, 0 8px 10px -6px #0000001a;
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 /* responsive */
 
 @media (min-width: 640px) {
     .container {
         max-width:640px
+    }
+    .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
