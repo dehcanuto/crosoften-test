@@ -1,5 +1,6 @@
-<main>
-    <section class="container mx-auto contries-list">
+<main class="container mx-auto">
+    <app-search-filter (updateCountries)="filterCoutries($event)"></app-search-filter>
+    <section class="contries-list">
         <div class="contries-list__container">
             @for (item of countries; track item.name) {
                 <app-card [country]="item"></app-card>

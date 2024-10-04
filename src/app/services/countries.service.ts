@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CountryType } from '../models/country.model';
+import { RegionEnum } from '../enums/region.enum';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,9 @@ export class CountriesService {
 
   public getCountryByCodes(codes: string): Observable<CountryType[]> {
     return this.http.get<CountryType[]>(`${this.API_URL}/alpha?codes=${codes}`);
+  }
+
+  public getCountryByRegion(region: RegionEnum): Observable<CountryType[]> {
+    return this.http.get<CountryType[]>(`${this.API_URL}/region/${region}`);
   }
 }

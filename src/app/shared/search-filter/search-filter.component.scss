@@ -1,0 +1,22 @@
+.filter-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+
+    &__form-fields {
+        width: 100%;
+        padding: 15px 30px;
+        color: #000;
+        border: none;
+        border-radius: 7px;
+    }
+        
+    input {
+        max-width: 400px;
+    }
+
+    select {
+        max-width: 150px;
+    }
+}
