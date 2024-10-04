@@ -1,10 +1,12 @@
 <form class="filter-actions" [formGroup]="form">
-    <input
-        type="text"
-        placeholder="Search for a country..."
-        formControlName="search"
-        class="filter-actions__form-fields shadow-lg"
-    />
+    <div class="search filter-actions__form-fields shadow-lg">
+        <ion-icon name="search"></ion-icon>
+        <input
+            type="text"
+            placeholder="Search for a country..."
+            formControlName="search"
+        />
+    </div>
     <select formControlName="filter" class="filter-actions__form-fields shadow-lg">
         <option value="Filter by region" selected disabled hidden>Filter by region</option>
         @for (item of regions; track item.value) {
