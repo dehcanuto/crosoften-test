@@ -20,4 +20,10 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have the 'Where in the world?' title`, () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toEqual('Where in the world?');
+  });
 });
