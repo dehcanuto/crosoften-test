@@ -1,0 +1,15 @@
+@if (country) {
+    <div class="card">
+        <img
+          class="card__thumbnail"
+          [src]="country.flags.png"
+          [alt]="country.name.common + ' flag'"
+        />
+        <div class="card__container">
+          <h3 class="card__title">{{ country.name.common }}</h3>
+          <p><b>Population:</b> {{ country.population }}</p>
+          <p><b>Region:</b> {{ country.region }}</p>
+          <p><b>Capital:</b> {{ country.capital }}</p>
+        </div>
+    </div>
+}
