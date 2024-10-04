@@ -7,3 +7,8 @@ export function formatSlugToString(value: string): string {
     const response = value.replace(/-/g, '%20').replace(/\b\w/g, char => char.toUpperCase());
     return response;
 }
+
+export function formatNumber(value: number) {
+    const response = value.toLocaleString('en-US');
+    return response;
+}

@@ -4,7 +4,7 @@ import { finalize, map, of, switchMap } from 'rxjs';
 
 import { CountriesService } from '../../services/countries.service';
 import { CountryType } from '../../models/country.model';
-import { formatSlugToString } from '../../misc/format';
+import { formatSlugToString, formatNumber } from '../../misc/format';
 
 @Component({
   selector: 'app-details',
@@ -28,6 +28,10 @@ export class DetailsComponent {
 
   get languages() {
     return this.country?.languages ? Object.values(this.country.languages) : [];
+  }
+
+  get population() {
+    return formatNumber(this.country.population);
   }
 
   ngOnInit(): void {
