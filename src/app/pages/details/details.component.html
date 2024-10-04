@@ -1,0 +1,55 @@
+@if (country) {
+    <main>
+        <section class="container mx-auto country-info">
+            <a href="/" class="button">
+                Back
+            </a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 country-info__details">
+                <div class="country-info__thumbnail">
+                    <img [src]="country.flags.svg" [alt]="country.name.common + ' flag'" />
+                </div>
+                <div>
+                    <h2>{{ country.name.common }}</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-7">
+                        <div class="country-info__box">
+                            <p><b>Native Name:</b> {{ country.name.official }}</p>
+                            <p><b>Population:</b> {{ country.population }}</p>
+                            <p><b>Region:</b> {{ country.region }}</p>
+                            <p><b>Sub Region:</b> {{ country.subregion }}</p>
+                            <p><b>Capital:</b> {{ country.capital }}</p>
+                        </div>
+                        <div class="country-info__box">
+                            <p>
+                                <b>Top Level Domain:</b> 
+                                {{ country.tld }}</p>
+                            <p>
+                                <b>Currencies: </b>
+                                @for (currency of currencies; track currency) {
+                                    <span>{{ currency }}</span>
+                                }
+                            </p>
+                            <p>
+                                <b>Languages: </b>
+                                @for (language of languages; track language) {
+                                    <span>{{ language }}</span>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                    @if (borderCountries.length) {
+                        <div class="country-info__border-countries">
+                            <b>Border Countries:</b>
+                            <div class="country-info__border-countries__buttons">
+                                @for (borderCountry of borderCountries; track $index) {
+                                    <a [href]="'/country/' + borderCountry" class="button shadow-lg">
+                                        {{ borderCountry }}
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </section>
+    </main>
+}

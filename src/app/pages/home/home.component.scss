@@ -1,0 +1,21 @@
+.contries-list {
+  
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+
+    @media screen and (min-width: 1536px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @media screen and (max-width: 1280px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
+      padding: 30px;
+    }
+  }
+}

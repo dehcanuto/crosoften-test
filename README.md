@@ -24,10 +24,32 @@ $ npm install
 ### 3. Rodar projeto
 
 ```bash
-$ ng serve
+$ ng serve --open
 ```
 
 O projeto será apresentado através do link [http://localhost:4200/](http://localhost:4200/).
+
+## ✨ Code
+
+### Compontentes
+```cmd
+ng generate component [componente]
+```
+
+### Módulos
+```
+ng generate module [modulo] --flat --module=app
+```
+
+### Rotas
+```
+ng generate module [rota] --flat --routing
+```
+
+### Cria modulo e componente ao mesmo tempo
+```cmd
+ng generate component [componente] && ng generate module [componente] --routing
+```
 
 ## 🧪 Testes
 
@@ -42,7 +64,3 @@ Execute `ng e2e` para executar os testes end-to-end por meio de uma plataforma d
 ## 🔥 Build
 
 Execute `ng build` para dar build no projeto. Os artefatos da build serão armazenados no diretório `dist/`.
-
-## ✨ Code
-
-Execute `ng generate component component-name` para gerar um novo componente. Você também pode usar `ng generate Directive|pipe|service|class|guard|interface|enum|module`.
